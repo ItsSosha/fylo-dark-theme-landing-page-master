@@ -1,0 +1,39 @@
+
+.card {
+   background-color: #202a3c;
+   border-radius: 0.5rem;
+   padding: 2.5em 3em;
+    display: flex;
+    flex-direction: column;
+
+   &__text {
+    flex-grow: 1;
+    opacity: 0.8;
+    font-size: 1.1rem;
+   }
+
+   &__bottom {
+    display: flex;
+    height: 64px;
+    padding-top: 24px;
+    img {
+        border-radius: 50%;
+        max-height: 100%;
+    }
+   }
+
+   &__info {
+        padding-left: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        & > p:nth-child(1) {
+            font-weight: 700;
+        }
+
+        & > p:nth-child(2) {
+            opacity: 0.8;
+        }
+    }
+}

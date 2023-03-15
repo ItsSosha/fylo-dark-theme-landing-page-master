@@ -1,4 +1,5 @@
 @use '../sass/components/button';
+@use '../sass/components/card';
 
 *,
 *::before,
@@ -29,6 +30,7 @@ ol[class] {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -85,6 +87,19 @@ html {
         justify-items: end;
         column-gap: 50px;
         align-items: center;
+
+        li > a {
+            font-size: 1.2em;
+            opacity: 0.7;
+            transition: font-size 0.125s linear;
+        }
+
+        li > a:hover {
+            opacity: 1;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.3em;
+        }
     }
 }
 
@@ -229,6 +244,23 @@ html {
         row-gap: 1em;
         align-content: center;
         padding: 0 2em;
+    }
+}
+
+.reviews {
+    min-height: 60vh;
+    background-color:  #181F2A;
+    padding-top: 40px;
+    background-image: url(../images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-position: 10em 0.5em;
+
+    &__wrapper {
+        display: grid;
+        max-width: 1280px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2em;
     }
 }
 
