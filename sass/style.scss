@@ -29,6 +29,14 @@ ol[class] {
   list-style: none;
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
 a {
     color: inherit;
     text-decoration: none;
@@ -248,9 +256,9 @@ html {
 }
 
 .reviews {
-    min-height: 60vh;
     background-color:  #181F2A;
     padding-top: 40px;
+    padding-bottom: 250px;
     background-image: url(../images/bg-quotes.png);
     background-repeat: no-repeat;
     background-position: 10em 0.5em;
@@ -264,6 +272,63 @@ html {
     }
 }
 
+.signup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    background-color: #1c2431;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3em;
+    max-width: 60vw;
+    border-radius: 8px;
+
+    form {
+        display: flex;
+        width: 100%;
+        column-gap: 2em;
+        // padding-top: 3em;
+    }
+
+    &__input {
+        flex-grow: 5;
+        border-radius: 2em;
+        padding-left: 2em;
+        border: none;
+    }
+
+    &__button {
+        flex-grow: 1;
+        padding: .7em .6em;
+        // padding: .7em 0;
+        border: none;
+        font-size: clamp(12px, 1.2vw, 19.2px);
+    }  
+
+    &__title {
+        text-align: center;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    &__paragraph {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+}
+
 .footer {
+    position: relative;
     background-color: #0B1523;
+    min-height: 70vh;
+
+    &__wrapper {
+        display: grid;
+        margin: 15em auto 0;
+        max-width: 1300px;
+    }
 }
